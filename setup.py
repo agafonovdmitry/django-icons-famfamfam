@@ -11,11 +11,12 @@ setup(
     version='0.1',
     author='Dmitry Agafonov',
     author_email='Dmitry@Agafonov.pp.ru',
+    url='https://github.com/agafonovdmitry/django-icons-famfamfam',
     packages=find_packages(),
     include_package_data=True,
-    license='Various, see README.txt file',
+    license='Various, see README file',
     description='Django staticfiles with famfamfam silk and flag icon sets',
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     install_requires=[
         "Django >= 1.3",  # first release with staticfiles app bundled
     ],
