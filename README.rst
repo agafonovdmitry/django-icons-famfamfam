@@ -10,15 +10,41 @@ convert from imagemagick to produce minimal possible size with no loss.
 
 Total image count: 1246. Optimization: 793.8 kB => 727.8 kB (~8% less).
 
+Two template tags for easy usage are included via ``icons`` tag library.
+
 Installation
 ------------
 
-...
+**Directly from GitHub**::
+
+    pip install git+git://github.com/agafonovdmitry/django-icons-famfamfam.git
 
 Usage
 -----
 
-...
+**Make sure these lines are in ``INSTALLED_APPS`` in ``settings.py``**::
+
+    'django.contrib.staticfiles',
+    'django-icons-famfamfam',
+
+**In your templates**:
+
+Direct images usage::
+
+    <img src="{{ STATIC_URL }}icons/thumb_up.png" />
+    
+Or use special template tags bundled::
+
+    {% load icons %}
+    
+    <p><a href="/login/" {% icon 'door_in' %}>Login</a></p>
+    <h2 {% icon 'user' %}>Username</h2>
+    <p>Please subscribe to our <span {% icon 'feed' %}>RSS feed</span>.</p>
+    
+    <ul><li {% listicon 'bullet_picture' %}>Item</li></ul>
+
+See ``testproject`` folder which contains minimal django project and
+provided for testing and demonstration purposes.
 
 Original author's README files with license information follows:
 

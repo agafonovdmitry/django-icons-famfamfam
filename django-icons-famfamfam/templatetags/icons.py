@@ -33,7 +33,7 @@ def icon(icon_name):
 
     return (
         'class="icon" style="background-image:url(' +
-        settings.STATIC_URL + '/icons/' + icon_name + '.png);"'
+        settings.STATIC_URL + 'icons/' + icon_name + '.png);"'
     )
 
 
@@ -47,6 +47,6 @@ def listicon(icon_name):
     """
 
     return (
-        'style="list-style-image:url(' + settings.STATIC_URL +
-        '/icons/' + icon_name + '.png);"'
+        'style="list-style-image:url(' +
+        settings.STATIC_URL + 'icons/' + icon_name + '.png);"'
     )

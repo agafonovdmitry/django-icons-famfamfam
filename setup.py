@@ -12,7 +12,7 @@ setup(
     author='Dmitry Agafonov',
     author_email='Dmitry@Agafonov.pp.ru',
     url='https://github.com/agafonovdmitry/django-icons-famfamfam',
-    packages=find_packages(),
+    packages=find_packages(exclude=['testproject']),
     include_package_data=True,
     license='Various, see README file',
     description='Django staticfiles with famfamfam silk and flag icon sets',
