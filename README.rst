@@ -1,5 +1,5 @@
 ============================
-About Django-Icons-Famfamfam
+About Django Icons Famfamfam
 ============================
 
 This package provides django staticfiles with famous famfamfam silk and
