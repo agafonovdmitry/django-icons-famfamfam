@@ -8,7 +8,7 @@ flag (png) icon sets combined together into one reuseable app.
 All images were additionally optimized using optipng, pngcrush and
 convert from imagemagick to produce minimal possible size with no loss.
 
-Total image count: 1246. Optimization: 793.8 kB => 727.8 kB (~8% less).
+Total image count: 1248. Optimization: 794 kB => 729 kB (~8% less).
 
 Two template tags for easy usage are included via ``icons`` tag library.
 
@@ -22,7 +22,7 @@ Installation
 Usage
 -----
 
-**Make sure these lines are in ``INSTALLED_APPS`` in ``settings.py``**::
+**Make sure these lines are in** ``INSTALLED_APPS`` **in** ``settings.py``::
 
     'django.contrib.staticfiles',
     'django-icons-famfamfam',
