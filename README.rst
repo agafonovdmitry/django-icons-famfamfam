@@ -26,10 +26,8 @@ Original author's README files with license information follows:
 
 Silk icon set 1.3
 
-_________________________________________
 Mark James
 http://www.famfamfam.com/lab/icons/silk/
-_________________________________________
 
 This work is licensed under a
 Creative Commons Attribution 2.5 License.
@@ -58,5 +56,3 @@ Note that these flags are named using the ISO3166-1 alpha-2 country codes where 
 If you find these icons useful, please donate via paypal to mjames@gmail.com (or click the donate button available at http://www.famfamfam.com/lab/icons/silk)
 
 Contact: mjames@gmail.com
-
-------------
