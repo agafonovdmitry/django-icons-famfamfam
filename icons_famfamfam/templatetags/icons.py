@@ -3,9 +3,13 @@
 """
 Icon inclusion tags for your templates.
 
-Add this to CSS:
-.icon { padding-left: 20px; background-repeat: no-repeat;}
-Note: use at least 20px line-height for best experiences.
+Add something like this to CSS:
+
+.bgicon {
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  line-height: 20px;
+}
 
 Add this to your template before use:
 {% load icons %}
@@ -23,16 +27,31 @@ register = template.Library()
 @register.simple_tag
 def icon(icon_name):
     """
-    Adds icon for element as a backgroung image.
+    Adds icon as inline image.
 
     Example usage:
-    <a href="/login/" {% icon 'door_in' %}>Login</a>
-    <h2 {% icon 'user' %}>{{ user.username }}</h2>
-    <p>Please subscribe to our <span {% icon 'feed' %}>RSS feed</span>.</p>
+    <p>{% icon 'webcam' %} See me on-line!</p>
     """
 
     return (
-        'class="icon" style="background-image:url(' +
+        '<img class="icon" src="' +
+        settings.STATIC_URL + 'icons/' + icon_name + '.png" />'
+    )
+
+
+@register.simple_tag
+def bgicon(icon_name):
+    """
+    Adds icon for element as a backgroung image.
+
+    Example usage:
+    <a href="/login/" {% bgicon 'door_in' %}>Login</a>
+    <h2 {% bgicon 'user' %}>{{ user.username }}</h2>
+    <p>Please subscribe to our <span {% bgicon 'feed' %}>RSS feed</span>.</p>
+    """
+
+    return (
+        'class="bgicon" style="background-image:url(' +
         settings.STATIC_URL + 'icons/' + icon_name + '.png);"'
     )
 

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 """
 Setup file for django-icons-famfamfam package.
 """
@@ -12,7 +13,7 @@ setup(
     author='Dmitry Agafonov',
     author_email='Dmitry@Agafonov.pp.ru',
     url='https://github.com/agafonovdmitry/django-icons-famfamfam',
-    packages=find_packages(exclude=['testproject']),
+    packages=find_packages(exclude=['example_project']),
     include_package_data=True,
     license='Various, see README file',
     description='Django staticfiles with famfamfam silk and flag icon sets',

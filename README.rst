@@ -29,9 +29,17 @@ Usage
 **Make sure these lines are in** ``INSTALLED_APPS`` **in** ``settings.py``::
 
     'django.contrib.staticfiles',
-    'django-icons-famfamfam',
+    'icons_famfamfam',
 
 **In your templates**:
+
+Add something like this to CSS::
+
+    .bgicon {
+      padding-left: 20px;
+      background-repeat: no-repeat;
+      line-height: 20px;
+    }
 
 Direct images usage::
 
@@ -41,13 +49,15 @@ Or use special template tags bundled::
 
     {% load icons %}
     
-    <p><a href="/login/" {% icon 'door_in' %}>Login</a></p>
-    <h2 {% icon 'user' %}>Username</h2>
-    <p>Please subscribe to our <span {% icon 'feed' %}>RSS feed</span>.</p>
+    <p>{% icon 'webcam' %} See me on-line!</p>
+    
+    <p><a href="/login/" {% bgicon 'door_in' %}>Login</a></p>
+    <h2 {% bgicon 'user' %}>Username</h2>
+    <p>Please subscribe to our <span {% bgicon 'feed' %}>RSS feed</span>.</p>
     
     <ul><li {% listicon 'bullet_picture' %}>Item</li></ul>
 
-See ``testproject`` folder at github which contains minimal django
+See ``example_project`` folder at github which contains minimal django
 project and provided for testing and demonstration purposes.
 
 Original author's README files with license information follows:

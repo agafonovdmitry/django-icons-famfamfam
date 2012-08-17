@@ -4,6 +4,6 @@ ROOT_URLCONF = 'fam.urls'
 STATIC_URL = '/static/'
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
-    'django-icons-famfamfam',
+    'icons_famfamfam',
     'fam.famfam',
 )

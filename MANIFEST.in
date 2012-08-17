@@ -1,1 +1,1 @@
-recursive-include django-icons-famfamfam *.py *.png
+recursive-include icons_famfamfam *.py *.png
