@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-icons-famfamfam',
-    version='0.1',
+    version='0.2',
     author='Dmitry Agafonov',
     author_email='Dmitry@Agafonov.pp.ru',
     url='https://github.com/agafonovdmitry/django-icons-famfamfam',
@@ -21,7 +21,7 @@ setup(
         "Django >= 1.3",  # first release with staticfiles app bundled
     ],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',

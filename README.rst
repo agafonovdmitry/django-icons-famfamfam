@@ -15,6 +15,10 @@ Two template tags for easy usage are included via ``icons`` tag library.
 Installation
 ------------
 
+**Via PyPI**::
+
+    pip install django-icons-famfamfam
+
 **Directly from GitHub**::
 
     pip install git+git://github.com/agafonovdmitry/django-icons-famfamfam.git
@@ -43,8 +47,8 @@ Or use special template tags bundled::
     
     <ul><li {% listicon 'bullet_picture' %}>Item</li></ul>
 
-See ``testproject`` folder which contains minimal django project and
-provided for testing and demonstration purposes.
+See ``testproject`` folder at github which contains minimal django
+project and provided for testing and demonstration purposes.
 
 Original author's README files with license information follows:
 
