@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-icons-famfamfam',
-    version='0.2',
+    version='0.2-1',
     author='Dmitry Agafonov',
     author_email='Dmitry@Agafonov.pp.ru',
     url='https://github.com/agafonovdmitry/django-icons-famfamfam',

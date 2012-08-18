@@ -1,2 +1,11 @@
+v0.2-1, 2012-08-18 -- Fix missing files.
+
 v0.2, 2012-08-18 -- Reorganisation and beta status.
+    - Django app is now 'icons_famfamfam'.
+    - 3 template tags:
+      - icon (inline image),
+      - bgicon (background image for current html tag),
+      - listicon (list bullet image).
+    - Template tags accepts additional classes and styles.
+
 v0.1, 2012-08-16 -- Initial release.
