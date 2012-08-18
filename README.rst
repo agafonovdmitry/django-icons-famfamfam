@@ -58,7 +58,8 @@ Or use special template tags bundled::
 See ``example_project`` folder at github which contains minimal django
 project and provided for testing and demonstration purposes.
 
-Original author's README files with license information follows:
+
+**Original author's README files with license information follows:**
 
 ------------
 
