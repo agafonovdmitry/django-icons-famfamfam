@@ -1,24 +1,26 @@
 <html>
     <head>
         <style>
-            .icon { padding-left: 20px; background-repeat: no-repeat; line-height: 20px; }
+            .icon { width:16px; height:16px; padding:2px; line-height:20px; }
+            .bgicon { padding-left:20px; background-repeat:no-repeat; line-height:20px; }
+            .listicon { /* ... */ }
         </style>
     </head>
     <body>
 
         <h1>Testing famfamfam icons!</h1>
 
-        <p><img src="{{ STATIC_URL }}icons/thumb_up.png"></p>
+        <p><img class="icon" src="{{ STATIC_URL }}icons/thumb_up.png" /></p>
 
         {% load icons %}
 
-        <p>{% icon 'webcam' %} See me on-line!</p>
+        <p>{% icon 'webcam' styles='border:1px solid #ccc' classes='one two' %} See me on-line!</p>
 
         <p><a href="/login/" {% bgicon 'door_in' %}>Login</a></p>
         <h2 {% bgicon 'user' %}>Username</h2>
-        <p>Please subscribe to our <span {% bgicon 'feed' %}>RSS feed</span>.</p>
+        <p>Please subscribe to our <span {% bgicon 'feed' classes="more" %}>RSS feed</span>.</p>
 
-        <ul><li {% listicon 'bullet_picture' %}>Item</li></ul>
+        <ul><li {% listicon 'bullet_picture' styles='font-weight:bold' %}>Item</li></ul>
 
     </body>
 </html>

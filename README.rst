@@ -10,7 +10,7 @@ convert from imagemagick to produce minimal possible size with no loss.
 
 Total image count: 1248. Optimization: 794 kB => 729 kB (~8% less).
 
-Two template tags for easy usage are included via ``icons`` tag library.
+Three template tags for easy usage are included via ``icons`` tag library.
 
 Installation
 ------------
@@ -35,27 +35,25 @@ Usage
 
 Add something like this to CSS::
 
-    .bgicon {
-      padding-left: 20px;
-      background-repeat: no-repeat;
-      line-height: 20px;
-    }
+    .icon { width:16px; height:16px; padding:2px; line-height:20px; }
+    .bgicon { padding-left:20px; background-repeat:no-repeat; line-height:20px; }
+    .listicon { /* ... */ }
 
 Direct images usage::
 
-    <img src="{{ STATIC_URL }}icons/thumb_up.png" />
+    <img class="icon" src="{{ STATIC_URL }}icons/thumb_up.png" />
     
 Or use special template tags bundled::
 
     {% load icons %}
     
-    <p>{% icon 'webcam' %} See me on-line!</p>
-    
+    <p>{% icon 'webcam' styles='border:1px solid #ccc' classes='one two' %} See me on-line!</p>
+
     <p><a href="/login/" {% bgicon 'door_in' %}>Login</a></p>
     <h2 {% bgicon 'user' %}>Username</h2>
-    <p>Please subscribe to our <span {% bgicon 'feed' %}>RSS feed</span>.</p>
-    
-    <ul><li {% listicon 'bullet_picture' %}>Item</li></ul>
+    <p>Please subscribe to our <span {% bgicon 'feed' classes="more" %}>RSS feed</span>.</p>
+
+    <ul><li {% listicon 'bullet_picture' styles='font-weight:bold' %}>Item</li></ul>
 
 See ``example_project`` folder at github which contains minimal django
 project and provided for testing and demonstration purposes.
