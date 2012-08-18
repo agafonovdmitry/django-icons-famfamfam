@@ -29,11 +29,11 @@ def icon(icon_name, *args, **kwargs):
     Adds icon as inline image.
 
     Example usage:
-    <p>{% icon 'webcam' %} See me on-line!</p>
+    <p>{% icon 'webcam' styles='border:1px solid #ccc' classes='one two' %} See me on-line!</p>
     """
 
     classes = ' ' + kwargs['classes'] if 'classes' in kwargs else ''
-    styles = ' style="' + kwargs['styles'] + '"' if 'styles' in kwargs else ''
+    styles = ' style="' + kwargs['styles'] + ';"' if 'styles' in kwargs else ''
 
     return (
         '<img class="icon' + classes + '" src="' +
@@ -48,9 +48,9 @@ def bgicon(icon_name, *args, **kwargs):
     Adds icon for element as a backgroung image.
 
     Example usage:
-    <a href="/login/" {% bgicon 'door_in' %}>Login</a>
-    <h2 {% bgicon 'user' %}>{{ user.username }}</h2>
-    <p>Please subscribe to our <span {% bgicon 'feed' %}>RSS feed</span>.</p>
+    <p><a href="/login/" {% bgicon 'door_in' %}>Login</a></p>
+    <h2 {% bgicon 'user' %}>Username</h2>
+    <p>Please subscribe to our <span {% bgicon 'feed' classes="more" %}>RSS feed</span>.</p>
     """
 
     classes = ' ' + kwargs['classes'] if 'classes' in kwargs else ''
@@ -70,7 +70,7 @@ def listicon(icon_name, *args, **kwargs):
     Adds list-style icon for element.
 
     Example usage:
-    <ul><li {% listicon 'bullet_picture' %}>Item</li></ul>
+    <ul><li {% listicon 'bullet_picture' styles='font-weight:bold' %}>Item</li></ul>
     """
 
     classes = ' ' + kwargs['classes'] if 'classes' in kwargs else ''
